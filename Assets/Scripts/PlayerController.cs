@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] Rigidbody2D myRigid;
     [SerializeField] Animator animator;
-    [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] BoxCollider2D myBoxCollider;
 
     [SerializeField] float moveSpeed = 5f;
@@ -16,7 +15,6 @@ public class PlayerController : MonoBehaviour
     bool isClimb => Input.GetKey(KeyCode.W);
 
     float defaultGravityScale;
-    LayerMask mask;
 
     void Start() 
     {
@@ -45,7 +43,6 @@ public class PlayerController : MonoBehaviour
 
         Vector2 playerVelocity = new Vector2 (inputValue * moveSpeed, myRigid.velocity.y);
         myRigid.velocity = playerVelocity;
-
     }
 
     void Jump()
@@ -93,7 +90,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.CompareTag("Enemy"))
         {
             //Game Over Phase
-            Debug.Log("Game Over !");
+            GameManager.Instance.ShowGameOverPanel();
             Time.timeScale = 0;
         }
     }
@@ -103,7 +100,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.CompareTag("Princess"))
         {
             //Player Win Phase
-            Debug.Log("You Won !");
+            GameManager.Instance.ShowWinPanel();
             Time.timeScale = 0;
         }
     }
