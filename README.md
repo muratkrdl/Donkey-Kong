@@ -4,7 +4,7 @@
 
 # Gameplay
 
-<img src="https://github.com/muratkrdl/Donkey-Kong/blob/main/Donkey%20Kong.png" width="700">
+<img src="https://github.com/muratkrdl/Donkey-Kong/blob/main/Donkey%20Kong.png" width="450">
 
 
 ## Authors
