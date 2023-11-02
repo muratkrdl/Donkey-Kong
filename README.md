@@ -2,6 +2,7 @@
 # Donkey Kong
 
 The game is quite simple to figure out
+
 Move Mario left and right on the girders, up and down the ladders and avoid any obstacles in the way (either by jumping over them).
 
 # Gameplay
